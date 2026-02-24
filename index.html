@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irakiza Bonheur- Frontend Developer</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!-- Dark mode toggle button -->
+    <div class="theme-toggle">
+        <button id="darkModeToggle"><i class="fas fa-moon"></i> Dark Mode</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">AU</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Irakiza Bonheur</h1>
+                <p class="role">Frontend Developer</p>
+                <p class="tagline">Building digital solutions for Musanze and beyond.</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/profile-placeholder." alt="Alice Uwase">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I am a second-year Computer Science student at the Faculty of Sciences and Information Technology. Passionate about creating user-friendly web applications, my goal is to contribute to the tech ecosystem in Rwanda by developing innovative solutions that solve real-world problems.</p>
+                <div class="skills-list">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Git & GitHub</span>
+                    <span>Bootstrap</span>
+                    <span>Responsive Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills (with progress bars) -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-info"><span>HTML</span><span>90%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width:90%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>CSS</span><span>85%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width:85%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width:75%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>GitHub</span><span>80%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width:80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-info"><span>Bootstrap</span><span>70%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width:70%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/Bonheur.jpg" alt="Musanze Community Library System" style="width:100%; height:40%;">
+                    <h3>Musanze Community Library System</h3>
+                    <p><strong>Problem:</strong> Local library had manual record-keeping, leading to inefficiency.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, LocalStorage</p>
+                    <a href="#" class="btn small">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/weather.png" alt="Weather Dashboard for Farmers"style="width:100%; height:40%;">
+                    <h3>Weather Dashboard for Farmers</h3>
+                    <p><strong>Problem:</strong> Farmers need accurate weather forecasts for planning.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript, OpenWeather API</p>
+                    <a href="#" class="btn small">GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/Portfolio.jpg" alt="Personal Portfolio"style="width:100%; height:40%;">
+                    <h3>Personal Portfolio</h3>
+                    <p><strong>Problem:</strong> Needed a professional online presence to showcase skills.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    <a href="#" class="btn small">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive JavaScript Calculator (Musanze Transport Fare Estimator) -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <h2>Musanze Transport Fare Estimator</h2>
+            <div class="calc-card">
+                <form id="fareForm">
+                    <div class="form-group">
+                        <label for="distance">Distance (in km):</label>
+                        <input type="number" id="distance" step="0.1" min="0" required>
+                        <small class="error" id="distanceError"></small>
+                    </div>
+                    <button type="submit" class="btn">Estimate Fare</button>
+                </form>
+                <div class="result" id="fareResult">
+                    <p>Estimated fare: <span id="fareAmount">—</span> RWF</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloadable CV Section -->
+    <section id="cv" class="cv">
+        <div class="container">
+            <h2>My CV</h2>
+            <div class="cv-preview">
+                <h3>Irakiza Bonheur</h3>
+                <p><strong>Education:</strong> BSc Computer Science (Year 2), Faculty of Sciences and IT</p>
+                <p><strong>Skills:</strong> HTML, CSS, JavaScript, Git, Bootstrap, Responsive Design</p>
+                <p><strong>Experience:</strong> Intern at Musanze Tech Hub (Summer 2026)</p>
+                <p><strong>Languages:</strong> English, Kinyarwanda, French</p>
+            </div>
+            <button id="downloadCV" class="btn">Download CV (TXT)</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> djlicensebonheuze@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +250 794474785</p>
+                <p><i class="fab fa-linkedin"></i> linkedin.com/in/Irakiza Bonheur</p>
+                <p><i class="fab fa-github"></i> github.com/IrakizaBonheur</p>
+            </div>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                    <small class="error" id="nameError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <small class="error" id="emailError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" required></textarea>
+                    <small class="error" id="messageError"></small>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <p id="formSuccess" class="success-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Irakiza Bonheur. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="java/java.js"></script>
+</body>
+</html>
